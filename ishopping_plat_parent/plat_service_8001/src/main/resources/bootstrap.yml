@@ -1,0 +1,18 @@
+spring:
+  profiles:
+      active: dev  #默认启动dev
+  cloud:
+    config:
+      name: application #github上面名称
+      profile: ${spring.profiles.active} # 默认启动dev  打包[打包插件+package]-> 环境 java -jar -Dspring.profiles.active=test/dev xxx jar执行
+      label: master #分支
+      discovery:
+        enabled: true #从eureka上面找配置服务【启用】
+        service-id: ishopping-config-server #指定服务名[Eureka上显示的application名]
+      #uri: http://127.0.0.1:1299 #配置服务器 单机配置【不用 用eureka上面的】
+eureka: #eureka不能放到远程配置中
+  client:
+    service-url:
+     defaultZone: http://localhost:7001/eureka  #告诉服务提供者要把服务注册到哪儿 #单机环境
+  instance:
+    prefer-ip-address: true #显示客户端真实ip

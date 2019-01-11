@@ -2,12 +2,14 @@ package cn.goldensoft.ishopping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@EnableEurekaClient
-public class PlatServiceApplication {
+@EnableEurekaClient  //加入注册中心
+@EnableConfigServer   //启用配置服务端
+public class ConfigServerApplication_6001 {
     public static void main(String[] args) {
-        SpringApplication.run(PlatServiceApplication.class);
+        SpringApplication.run(ConfigServerApplication_6001.class);
     }
 }

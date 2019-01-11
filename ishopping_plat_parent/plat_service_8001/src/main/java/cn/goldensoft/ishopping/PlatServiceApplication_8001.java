@@ -2,12 +2,12 @@ package cn.goldensoft.ishopping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@EnableEurekaServer
-public class EurekaServerApplication_7001 {
+@EnableEurekaClient
+public class PlatServiceApplication_8001 {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServerApplication_7001.class,args);
+        SpringApplication.run(PlatServiceApplication_8001.class);
     }
 }

@@ -13,6 +13,7 @@
         <module>zuul_gateway_9227</module>
         <module>basic_parent</module>
         <module>ishopping_plat_parent</module>
+        <module>config_server_6001</module>
     </modules>
 
     <!--约束springboot和springcloud的版本-->
