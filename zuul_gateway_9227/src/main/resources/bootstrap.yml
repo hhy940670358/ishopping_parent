@@ -15,3 +15,9 @@ eureka:
      defaultZone: http://localhost:7001/eureka  #告诉服务提供者要把服务注册到哪儿 #单机环境
   instance:
     prefer-ip-address: true #显示客户端真实ip
+  zuul:
+    routes:
+      plat.serviceId: plat-provider #这是调用满足条件的服务名，注意要小写
+      plat.path: /plat/** #这是所有路径前的通配
+    ignored-services: "*" #用*来通配符，忽略从9527端口通过服务名来调用
+    prefix: "/services" #这是所有路径的前缀

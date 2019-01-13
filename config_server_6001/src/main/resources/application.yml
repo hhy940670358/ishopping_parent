@@ -9,10 +9,14 @@ eureka:
 spring:
   application:
     name: ishopping-config-server
+  profiles:
+    active: native
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/hhy940670358/ishopping-config.git
-          username: hhy940670358
-          password: hehuiyang940670358
+#        git:
+#          uri: https://github.com/hhy940670358/ishopping-config.git  # 配置中心-》远程配置
+#          username: hhy940670358
+#          password: hehuiyang940670358
+        native:
+          search-locations: C:/Users/94067/Desktop/项目四配置文件/ishopping-config  # 配置中心-》本地配置

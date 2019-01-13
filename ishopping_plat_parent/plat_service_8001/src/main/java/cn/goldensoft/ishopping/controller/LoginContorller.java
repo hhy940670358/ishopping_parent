@@ -14,8 +14,10 @@ public class LoginContorller {
      * */
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public AjaxResult login(@RequestBody Employee employee){
-        if("admin".equals(employee.getName())&&"123".equals(employee.getPassword()))
-            return AjaxResult.me();
+        System.out.println(employee);
+        if("admin".equals(employee.getName())&&"123".equals(employee.getPassword())) {
+            return AjaxResult.me().setResultObj(employee);
+        }
         return AjaxResult.me().setSuccess(false).setMessage("用户名或密码错误");
     }
 }
