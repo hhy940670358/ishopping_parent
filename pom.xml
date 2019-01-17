@@ -14,6 +14,9 @@
         <module>basic_parent</module>
         <module>ishopping_plat_parent</module>
         <module>config_server_6001</module>
+        <module>product_parent</module>
+        <module>ishopping_generate</module>
+        <module>common_parent</module>
     </modules>
 
     <!--约束springboot和springcloud的版本-->
